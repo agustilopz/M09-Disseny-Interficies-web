@@ -1,0 +1,40 @@
+:root {
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+body{
+  background-color: #19202e;
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min-width, 160px), 1fr));
+  gap: var(--grid-gap, clamp(12px, 2vw, 22px));
+  margin-left: 4rem; 
+  margin-right: 4rem;
+  margin-top: 2.5rem;
+}
+
+.grid-size-m {
+  --card-min-width: 160px;
+  --grid-gap: clamp(12px, 2vw, 22px);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.fc .fc-daygrid-event {
+  @apply bg-blue-500 text-white rounded-md px-1;
+}
+.fc .fc-day-today {
+  @apply bg-yellow-100;
+}
+
+
+
