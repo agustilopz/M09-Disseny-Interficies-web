@@ -1,14 +1,7 @@
 import { useState } from 'react'
 import './App.css';
 import MovieCard from './MovieCard';
-
-
 import { moviesData} from "./moviesData";
-
-
-    moviesData.map((movie)=> {
-      console.log(movie.original_title)
-    })
 
 function App() {
 
@@ -25,7 +18,6 @@ function App() {
       )
     })}
     </div>
-
     </>
   )
   

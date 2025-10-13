@@ -819,30 +819,6 @@ export const moviesData = [
     userRating: 8,
     isLogged: true,
   },
-  
-  {
-    id: '34',
-    original_title: 'Avatar: The Way of Water',
-    year: 2022,
-    spanish_title: 'Avatar: El Camino del Agua',
-    poster_path: 'https://www.themoviedb.org/t/p/w1280/8rZ4d9k5c1z6j7e3m5f8h5f8h5f.jpg',
-    runtime: '3h 12m',
-    overview: 'Jake Sully and Neytiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora.',
-    genres: ['Adventure', 'Science Fiction'],
-    rating: 7.8,
-    director: 'James Cameron',
-    cast: [
-      { name: 'Sam Worthington', role: 'Jake Sully' },
-      { name: 'Zoe Saldana', role: 'Neytiri' },
-      { name: 'Sigourney Weaver', role: 'Dr. Grace Augustine' }
-    ],
-    country: 'United States',
-    watchedAt: '2025-07-20',
-        isWatched: true,
-    isOnWatchlist: false,
-    userRating: 8,
-    isLogged: true,
-  },
   {
     id: '35',
     original_title: 'The Avengers',
