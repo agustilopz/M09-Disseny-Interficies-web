@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  /*max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+ /* padding: 2rem; */
   text-align: center;
 }
 
@@ -10,9 +10,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+  padding: 2rem;
 }
 
 .movie-card {
+  
  
 }
 
@@ -20,4 +22,9 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.movie-card:hover img {
+  border: 2px solid blue;
+  cursor: pointer;
 }
