@@ -23,23 +23,19 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
- 
 }
 
 .movie-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
-    border: 2px solid transparent;
-
+  border: 2px solid transparent;
 }
-
 
 .movie-card img:hover {
   border: solid 2px rgb(152, 152, 152);
   cursor: pointer;
 }
-
 
 .movie-card-title {
   font-size: 0.9rem;
@@ -71,7 +67,6 @@
   font-weight: 400;
   color: #E6EBF3;
 }
-
 
 
 /* TOP NAV*/
