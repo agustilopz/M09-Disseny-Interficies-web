@@ -11,6 +11,8 @@ function App() {
 
   return (
     <>
+
+
     <nav style={{ backgroundColor: "#2C3545", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.8rem 2rem" }}>
     
           <ul style={{
@@ -48,12 +50,14 @@ function App() {
       image={movie.poster_path}
       title={movie.original_title}
       year={movie.year}
+      duration={movie.runtime}
       />
       )
     })}
           {}
 
     </div>
+
     </>
   )
   

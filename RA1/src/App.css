@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .movie-grid {
   display: grid;
@@ -14,7 +19,10 @@
 }
 
 .movie-card {
-  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
  
 }
 
@@ -22,9 +30,62 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
+    border: 2px solid transparent;
+
 }
 
-.movie-card:hover img {
-  border: 2px solid blue;
+
+.movie-card img:hover {
+  border: solid 2px rgb(152, 152, 152);
+  cursor: pointer;
+}
+
+
+.movie-card-title {
+  font-size: 0.9rem;
+  margin: 0.5em 0;
+  color: #E6EBF3;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  /*Limitar a dues línies*/
+  display: -webkit-box;
+  /* comportament tipus caixa flexible */
+  -webkit-box-orient: vertical;
+  /* orientació vertical */
+  -webkit-line-clamp: 2;
+  /* nombre màxim de línies */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-card-info {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.5em;
+}
+
+.movie-card-info-year {
+  font-weight: 400;
+  color: #E6EBF3;
+}
+
+
+
+/* TOP NAV*/
+.top-nav-icon {
+  height: var(--list-menu-icon-size);
+  width: var(--list-menu-icon-size);
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  border-radius: 8px;
+  background-color: #3C4657;
+}
+
+.top-nav-icon:hover {
+  background-color: #3C4657;
   cursor: pointer;
 }

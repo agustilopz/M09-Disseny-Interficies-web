@@ -6,16 +6,19 @@ interface MovieCardProps {
   image: string;
   title: string;
   year: number;
+  duration: string;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({image, title, year}) => {
+const MovieCard: React.FC<MovieCardProps> = ({image, title, year, duration}) => {
 
     return (
     <>
     <div className="movie-card">
     <img src={image} alt="" />
     <h3>{title}</h3>
-    <p>{year}</p>
+    <p className='movie-card-info'>
+    <span className='movie-card-info-year'>{year}</span> &nbsp;·&nbsp; {duration}
+    </p>
     </div>
     </>
     )
