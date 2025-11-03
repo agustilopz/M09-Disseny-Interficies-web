@@ -13,29 +13,13 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> =  ({ title, searchPlaceholder, navItems }) => {
     return (
         <>
-        <nav style={{ backgroundColor: "#2C3545", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.8rem 2rem" }}>
-          <ul style={{
-          display: "flex",
-          justifyContent: "space-between",
-          listStyle: "none",
-          gap: "2rem",
-          alignItems: "center"
-
-        }}>
-          <li> <FontAwesomeIcon className="top-nav-icon" icon={faBars}  style={{
-            height: "24px", width: "24px", display: "flex", alignItems: "center", padding: "0.4rem", borderRadius: "8px",
-          }} /></li>
-          <li style={{ fontSize: "1.4rem", fontWeight: "600" }}>{title}</li>
-          <li><div style={{ backgroundColor: "#374151", borderRadius: "15px", padding: "0.3rem 1.5rem", width: "50vh", textAlign: "left" }}>🔎 {searchPlaceholder}</div></li>
+        <nav className="bg-[#2C3545] flex justify-between items-center py-[0.8rem] px-8">
+          <ul className="flex justify-between items-center gap-8 list-none">
+          <li> <FontAwesomeIcon className="h-6 w-6 flex items-center p-[0.4rem] rounded-lg" icon={faBars}/></li>
+          <li className="text-[1.4rem] font-semibold">{title}</li>
+          <li><div className="bg-[#374151] rounded-[15px] py-[0.3rem] px-6 w-[50vh] text-left">🔎 {searchPlaceholder}</div></li>
         </ul>
-        <ul style={{
-          display: "flex",
-          justifyContent: "space-between",
-          listStyle: "none",
-          gap: "2rem",
-          alignItems: "center",
-          fontWeight: "500"
-        }}>
+        <ul className="flex justify-between list-none gap-8 items-center font-medium">
             {navItems.map((item) => {
                 return (
                     <li><a href="">{item}</a></li>
