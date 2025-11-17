@@ -1,10 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import MovieCard from './MovieCard';
-import Header from './Header';
-import Footer from './Footer';
+import MovieCard from './components/MovieCard';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Discover from './components/Discover';
+import ComingSoon from './components/ComingSoon';
+import Lists from './components/Lists';
 import { moviesData} from "./moviesData";
+import Films from './components/Films';
 
 function App() {
+
 
   return (
     <>
@@ -12,21 +18,14 @@ function App() {
       title="ITBFlix"
       searchPlaceholder="Search Movies & TV"
       navItems={["Films", "Discover", "Coming Soon", "Lists"]}
+      links={["/films","/discover","/coming-soon","/lists"]}
     />
-    <h4 className="block pt-8 pl-10 font-medium text-2xl text-left"><span className="hover:text-gray-400 inline-block cursor-pointer">Top Rated Movies</span></h4>
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-8">
-    
-    {moviesData.map((movie)=> {
-      return(
-      <MovieCard
-      image={movie.poster_path}
-      title={movie.original_title}
-      year={movie.year}
-      duration={movie.runtime}
-      />
-      )
-    })}
-    </div>
+    <Routes>
+        <Route path="/films" element={<Films/>} />
+        <Route path="/discover" element={<Discover/>} />
+        <Route path="/coming-soon" element={<ComingSoon/>} />
+        <Route path="/lists" element={<Lists/>} />
+    </Routes>
 
     <Footer />
     </>
