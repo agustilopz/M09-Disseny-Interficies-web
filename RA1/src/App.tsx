@@ -21,6 +21,7 @@ function App() {
       links={["/films","/discover","/coming-soon","/lists"]}
     />
     <Routes>
+        <Route path="/" element={<Films/>} />
         <Route path="/films" element={<Films/>} />
         <Route path="/discover" element={<Discover/>} />
         <Route path="/coming-soon" element={<ComingSoon/>} />
