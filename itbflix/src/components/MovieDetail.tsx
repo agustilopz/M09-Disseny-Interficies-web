@@ -1,6 +1,9 @@
 import React from 'react';
 import '../App.css';
 
+import AudioPlayer from './AudioPlayer';
+import VideoPlayer from './VideoPlayer';
+
 interface MovieDetailProps {
   image: string;
   title: string;
@@ -12,8 +15,8 @@ interface MovieDetailProps {
   director: string;
   cast: string[];
   country: string;
-  bso?: string;
-  trailer?: string;
+  bso: string;
+  trailer: string;
 }
 
 
@@ -45,7 +48,7 @@ const MovieDetail: React.FC<MovieDetailProps> = ({
               <p className="mb-2"><strong>Directed by</strong> {director}</p>
               <div className="country flex items-center gap-2 mb-2">
                 {/* Example flag, replace with dynamic if available */}
-                <img src="/assets/images/usa.png" alt="Country flag" className="w-6 h-4 inline-block" />
+                <img src="src/assets/images/usa.png" alt="Country flag" className="w-6 h-4 inline-block" />
                 <span>{country}</span>
               </div>
             </div>
@@ -56,6 +59,14 @@ const MovieDetail: React.FC<MovieDetailProps> = ({
               <p><b>Genres:</b> {genres.join(', ')}</p>
               <p><b>Rating:</b> {rating}/10</p>
               {/* Add more details as needed, e.g. bso, trailer */}
+              
+              {bso && (<div className="mt-4">
+                <h4 className="text-lg font-semibold mb-2">Original Soundtrack</h4>
+                <AudioPlayer 
+                audioMpeg={bso}
+                fallback={bso} />
+              </div>
+              )}
             </div>
           </div>
         </article>
@@ -65,7 +76,7 @@ const MovieDetail: React.FC<MovieDetailProps> = ({
             {cast.map((actor, idx) => (
               <div key={idx} className="cast-member bg-[#232b45] p-2 rounded-lg text-center">
                 {/* Example image, replace with dynamic if available */}
-                <img src={`/assets/images/cast${idx+1}.jpg`} alt={actor} className="w-20 h-24 object-cover mx-auto rounded" />
+                <img src={`src/assets/images/cast/${actor.toLowerCase().replace(/ /g, "_")}.webp`} alt={actor} className="w-20 h-24 object-cover mx-auto rounded" />
                 <p className="mt-2 font-semibold">{actor}</p>
                 {/* <p className="role">Role Name</p> */}
               </div>
@@ -75,7 +86,13 @@ const MovieDetail: React.FC<MovieDetailProps> = ({
         {/* Trailer section if available */}
         {trailer && (
           <div className="mt-8">
-            <iframe width="100%" height="320" src={trailer} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <h3 className="text-xl font-bold mb-2">Trailer</h3>
+            <VideoPlayer 
+              videoMp4={trailer}
+              videoWebm={trailer}
+              subtitles={`src/assets/subtitles/${trailer}.vtt`}
+              fallback="Your browser does not support the video tag."
+            />
           </div>
         )}
       </section>

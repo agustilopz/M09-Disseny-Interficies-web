@@ -12,8 +12,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({videoMp4, videoWebm, subtitles
     return (
     <>
     <video controls className="w-full">
-        <source src={videoMp4} type="video/mp4" />
-        <source src={videoWebm} type="video/webm" />
+        <source src={`src/assets/video/${videoMp4}.mp4`} type="video/mp4" />
+        <source src={`src/assets/video/${videoWebm}.webm`} type="video/webm" />
         <track src={subtitles} kind="subtitles" srcLang="en" label="English" default />
         {fallback}
     </video>

@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
     {/*<App />*/}
     <MovieDetail 
-      image="https://image.tmdb.org/t/p/w500//6MKr3KgOLmzOP6MSuZERO41Lpkt.jpg"
+      image="https://m.media-amazon.com/images/M/MV5BZjJiYTliODMtNjM3MS00MzkxLWFlZGUtNmRmYWI1MzFlZmRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
       title="The Batman"
       year={2022}
       duration="2h 55m"
@@ -20,6 +20,9 @@ createRoot(document.getElementById('root')!).render(
       director="Matt Reeves"
       cast={['Robert Pattinson', 'Zoë Kravitz', 'Paul Dano']}
       country="USA"
+      bso="05 Stay"
+      trailer="Whiplash-Trailer"
+
     />
     </BrowserRouter>
   </StrictMode>,
