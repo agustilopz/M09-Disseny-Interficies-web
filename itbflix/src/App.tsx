@@ -7,6 +7,7 @@ import Discover from './components/Discover';
 import ComingSoon from './components/ComingSoon';
 import Lists from './components/Lists';
 import MovieDetailPage from './components/MovieDetailPage';
+import MovieDetail from './components/MovieDetail';
 
 import { moviesData} from "./moviesData";
 import Films from './components/Films';
@@ -28,7 +29,7 @@ function App() {
         <Route path="/discover" element={<Discover/>} />
         <Route path="/coming-soon" element={<ComingSoon/>} />
         <Route path="/lists" element={<Lists/>} />
-        <Route path="/detail/:id" element={<MovieDetailPage />} />
+        <Route path="/films/:id" element={<MovieDetail movies={moviesData} />} />
     </Routes>
 
     <Footer />

@@ -3,6 +3,9 @@ import MovieCard from '../components/MovieCard';
 
 import { useState } from 'react';
 
+import { useNavigate } from "react-router-dom";
+
+
 import MovieDetail from './MovieDetail';
 
 
@@ -11,6 +14,7 @@ import { moviesData} from "../moviesData";
 const Films: React.FC = () => {
 
 const [selectedMovie, setSelectedMovie] = useState<any>(null);
+  const navigate = useNavigate();
 
 
   return (
@@ -27,15 +31,12 @@ const [selectedMovie, setSelectedMovie] = useState<any>(null);
       title={movie.original_title}
       year={movie.year}
       duration={movie.runtime}
-      onClick={() => setSelectedMovie(movie)}
+      onClick={() => navigate(`/films/${movie.id}`)}  // 👈 NAVIGATION
       />
       )
     })}
     </div>
 
-          {selectedMovie && (
-        <MovieDetail movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
-      )}
     
 
     </>

@@ -3,40 +3,59 @@ import '../App.css';
 
 import AudioPlayer from './AudioPlayer';
 import VideoPlayer from './VideoPlayer';
+import { useParams } from "react-router-dom";
+
+interface CastMember {
+  name: string;
+  role: string;
+}
+
+export interface Movie {
+  id: string;               // string en el teu dataset
+  original_title: string;
+  spanish_title?: string;
+  year: number;
+  poster_path: string;
+  runtime: string;
+  overview: string;
+  genres: string[];
+  rating: number;
+  director: string;
+  cast: CastMember[];
+  country?: string;
+  watchedAt?: string | null;
+  isWatched?: boolean;
+  isOnWatchlist?: boolean;
+  userRating?: number | null;
+  isLogged?: boolean;
+  trailer?: string;
+  bso?: string;
+}
 
 interface MovieDetailProps {
-  movie: {
-    image: string;
-    title: string;
-    year: number;
-    duration: string;
-    overview: string;
-    genres: string[];
-    rating: number;
-    director: string;
-    cast: { name: string; role: string }[];
-    country: string;
-    bso: string;
-    trailer: string;
-  };
-  onClose: () => void;
+  movies: Movie[];
 }
 
 
-const MovieDetail: React.FC<MovieDetailProps> = ({movie, onClose}) => {
+const MovieDetail: React.FC<MovieDetailProps> = ({movies}) => {
+  const { id } = useParams<{ id: string }>();
+  const movie = movies.find(m => m.id === (id));
+
+if (!movie) {
+  return <div className="text-white">Movie not found</div>;
+}
   return (
     <main className="main-movie-details min-h-screen bg-[#12192B] bg-cover bg-center text-white" style={{backgroundImage: `url('/assets/images/TheGodfatherBackdropGrade.png')`}}>
       <section className="movie-details bg-[#12192bcc] p-8 rounded-lg max-w-5xl mx-auto mt-8 shadow-lg">
-                <button onClick={onClose} className="mb-4 px-4 py-2 bg-gray-700 rounded hover:bg-gray-500">Close</button>
 
         <article className="main-header flex flex-col md:flex-row gap-8">
           <div className="poster flex-shrink-0">
-            <img src={movie.image} alt={movie.title} className="detallposter w-64 h-auto rounded-lg shadow-md" />
+            <img src={movie.poster_path} alt={movie.original_title} className="detallposter w-64 h-auto rounded-lg shadow-md" />
           </div>
           <div className="details flex-1">
             <div className="detail-text mb-4">
-              <h1 className="text-3xl font-bold mb-1">{movie.title} <span className="text-xl font-normal">({movie.year})</span></h1>
-              <p className="italic text-lg mb-2">{movie.duration} · {movie.genres.join(', ')}</p>
+              <h1 className="text-3xl font-bold mb-1">{movie.original_title} <span className="text-xl font-normal">({movie.year})</span></h1>
+              <p className="italic text-lg mb-2">{movie.runtime} · {movie.genres.join(', ')}</p>
               <p className="mb-2"><strong>Directed by</strong> {movie.director}</p>
               <div className="country flex items-center gap-2 mb-2">
                 {/* Example flag, replace with dynamic if available */}
