@@ -35,6 +35,12 @@ const [selectedMovie, setSelectedMovie] = useState<any>(null);
       />
       )
     })}
+    {/*}
+    
+  <Link to={`/movie/${movie.id}`}>
+  <MovieCard movie={movie} />
+  </Link>
+    {*/}
     </div>
 
     
