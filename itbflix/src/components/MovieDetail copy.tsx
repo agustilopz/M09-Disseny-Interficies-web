@@ -25,10 +25,9 @@ interface MovieDetailProps {
 
 const MovieDetail: React.FC<MovieDetailProps> = ({movie, onClose}) => {
   return (
-    <main className="main-movie-details min-h-screen bg-[#12192B] bg-cover bg-center text-white" style={{backgroundImage: `url('/assets/images/TheGodfatherBackdropGrade.png')`}}>
+    <main className="main-movie-details min-h-screen bg-[#12192B] bg-cover bg-center text-white" style={{backgroundImage: `url('/assets/images/TheGodfatherBackdropGrade.png')`} }>
       <section className="movie-details bg-[#12192bcc] p-8 rounded-lg max-w-5xl mx-auto mt-8 shadow-lg">
-                <button onClick={onClose} className="mb-4 px-4 py-2 bg-gray-700 rounded hover:bg-gray-500">Close</button>
-
+        <button onClick={onClose} className="mb-4 px-4 py-2 bg-gray-700 rounded hover:bg-gray-500">Close</button>
         <article className="main-header flex flex-col md:flex-row gap-8">
           <div className="poster flex-shrink-0">
             <img src={movie.image} alt={movie.title} className="detallposter w-64 h-auto rounded-lg shadow-md" />
@@ -51,7 +50,6 @@ const MovieDetail: React.FC<MovieDetailProps> = ({movie, onClose}) => {
               <p><b>Genres:</b> {movie.genres.join(', ')}</p>
               <p><b>Rating:</b> {movie.rating}/10</p>
               {/* Add more details as needed, e.g. bso, trailer */}
-              
             </div>
           </div>
         </article>
@@ -79,14 +77,14 @@ const MovieDetail: React.FC<MovieDetailProps> = ({movie, onClose}) => {
             />
           </div>
         )}
-
-                      {movie.bso && (<div className="mt-4">
-                <h4 className="text-lg font-semibold mb-2">Original Soundtrack</h4>
-                <AudioPlayer 
-                audioMpeg={movie.bso}
-                fallback={movie.bso} />
-              </div>
-              )}
+        {movie.bso && (
+          <div className="mt-4">
+            <h4 className="text-lg font-semibold mb-2">Original Soundtrack</h4>
+            <AudioPlayer 
+              audioMpeg={movie.bso}
+              fallback={movie.bso} />
+          </div>
+        )}
       </section>
     </main>
   );
