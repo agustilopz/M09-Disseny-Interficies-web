@@ -23,6 +23,8 @@ export const moviesData = [
     isOnWatchlist: true,
     userRating: 10,
     isLogged: true,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
     {
     id: '2',
@@ -48,6 +50,8 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: 8,
     isLogged: true,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
     {
     id: '3',
@@ -73,6 +77,8 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: 7,
     isLogged: true,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
     {
     id: '4',
@@ -98,6 +104,8 @@ export const moviesData = [
     isOnWatchlist: true,
     userRating: null,
     isLogged: false,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
    {id: '5',
     original_title: 'Back to the Future',
@@ -122,6 +130,8 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: 8,
     isLogged: true,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
   {
     id: '6',
@@ -147,6 +157,8 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: 9,
     isLogged: true,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
     {
     id: '7',
@@ -172,6 +184,8 @@ export const moviesData = [
     isOnWatchlist: true,
     userRating: 8,
     isLogged: true,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
     {
     id: '8',
@@ -197,6 +211,8 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: null,
     isLogged: false,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
     {
     id: '9',
@@ -222,6 +238,8 @@ export const moviesData = [
     isOnWatchlist: true,
     userRating: null,
     isLogged: false,
+    trailer_path: '',
+    soundtrack_paths: [],
   },
   
   {id: '10',
