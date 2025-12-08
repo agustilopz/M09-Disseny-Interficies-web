@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 interface CastMember {
   name: string;
   role: string;
+  image: string;
 }
 
 export interface Movie {
@@ -59,7 +60,7 @@ if (!movie) {
               <p className="mb-2"><strong>Directed by</strong> {movie.director}</p>
               <div className="country flex items-center gap-2 mb-2">
                 {/* Example flag, replace with dynamic if available */}
-                <img src="src/assets/images/usa.png" alt="Country flag" className="w-6 h-4 inline-block" />
+                <img src="/assets/images/usa.png" alt="Country flag" className="w-6 h-4 inline-block" />
                 <span>{movie.country}</span>
               </div>
             </div>
@@ -79,7 +80,7 @@ if (!movie) {
           <div className="cast-list grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {movie.cast.map((actor, idx) => (
               <div key={actor.name + actor.role} className="cast-member bg-[#232b45] p-2 rounded-lg text-center">
-                <img src={`src/assets/images/cast/${actor.name.toLowerCase().replace(/ /g, "_")}.webp`} alt={actor.name} className="w-20 h-24 object-cover mx-auto rounded" />
+                <img src={actor.image} alt={actor.name} className="w-20 h-24 object-cover mx-auto rounded" />
                 <p className="mt-2 font-semibold">{actor.name}</p>
                 <p className="text-xs">{actor.role}</p>
               </div>

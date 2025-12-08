@@ -11,8 +11,8 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({audioMpeg, audioOgg, fallback}
     return (
     <>
     <audio controls className="w-full">
-        <source src={`src/assets/audio/${audioMpeg}.mp3`} type="audio/mpeg" />
-        <source src={`src/assets/audio/${audioOgg}.ogg`} type="audio/ogg" />
+        <source src={`${audioMpeg}.mp3`} type="audio/mpeg" />
+        <source src={`${audioOgg}.ogg`} type="audio/ogg" />
         {fallback}
     </audio>
     </>
