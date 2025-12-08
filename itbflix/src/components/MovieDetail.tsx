@@ -93,7 +93,6 @@ if (!movie) {
             <VideoPlayer 
               videoMp4={movie.trailer}
               videoWebm={movie.trailer}
-              subtitles={`src/assets/subtitles/${movie.trailer}.vtt`}
               fallback="Your browser does not support the video tag."
             />
           </div>

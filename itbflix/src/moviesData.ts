@@ -23,7 +23,7 @@ export const moviesData = [
     isOnWatchlist: true,
     userRating: 10,
     isLogged: true,
-    trailer_path: 'src/assets/trailers/interstellar-trailer.mp4',
+    trailer: 'src/assets/video/interstellar-trailer',
     soundtrack_paths: ['src/assets/soundtracks/interstellar-bso.mp3', 'src/assets/soundtracks/interstellar-theme.mp3'],
   },
     {
@@ -50,7 +50,7 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: 8,
     isLogged: true,
-    trailer_path: '',
+    trailer: 'src/assets/video/the-dark-knight-trailer',
     soundtrack_paths: [],
   },
     {
@@ -77,7 +77,7 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: 7,
     isLogged: true,
-    trailer_path: '',
+    trailer: 'src/assets/video/parasite-trailer',
     soundtrack_paths: [],
   },
     {
@@ -104,7 +104,7 @@ export const moviesData = [
     isOnWatchlist: true,
     userRating: null,
     isLogged: false,
-    trailer_path: '',
+    trailer: 'src/assets/video/the-godfather-trailer',
     soundtrack_paths: [],
   },
    {id: '5',
@@ -130,7 +130,7 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: 8,
     isLogged: true,
-    trailer_path: '',
+    trailer: 'src/assets/video/back-to-the-future-trailer',
     soundtrack_paths: [],
   },
   {
@@ -157,7 +157,7 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: 9,
     isLogged: true,
-    trailer_path: '',
+    trailer: '',
     soundtrack_paths: [],
   },
     {
@@ -184,7 +184,7 @@ export const moviesData = [
     isOnWatchlist: true,
     userRating: 8,
     isLogged: true,
-    trailer_path: '',
+    trailer: '',
     soundtrack_paths: [],
   },
     {
@@ -211,7 +211,7 @@ export const moviesData = [
     isOnWatchlist: false,
     userRating: null,
     isLogged: false,
-    trailer_path: '',
+    trailer: '',
     soundtrack_paths: [],
   },
     {
@@ -238,7 +238,7 @@ export const moviesData = [
     isOnWatchlist: true,
     userRating: null,
     isLogged: false,
-    trailer_path: '',
+    trailer: '',
     soundtrack_paths: [],
   },
   
