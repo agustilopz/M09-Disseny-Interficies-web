@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 interface CastMember {
   name: string;
   role: string;
-  image: string;
+  image?: string;
 }
 
 export interface Movie {

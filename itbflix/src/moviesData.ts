@@ -11,11 +11,11 @@ export const moviesData = [
     rating: 8.3,
     director: 'Christopher Nolan',
     cast: [
-      { name: 'Matthew McConaughey', role: 'Cooper', image: '' },
-      { name: 'Anne Hathaway', role: 'Brand', image: '' },
-      { name: 'Jessica Chastain', role: 'Murph', image: '' },
-      { name: 'Michael Caine', role: 'Professor Brand', image: '' },
-      { name: 'Matt Damon', role: 'Mann', image: '' }
+      { name: 'Matthew McConaughey', role: 'Cooper', image: 'https://media.themoviedb.org/t/p/w600_and_h900_face/lCySuYjhXix3FzQdS4oceDDrXKI.jpg' },
+      { name: 'Anne Hathaway', role: 'Brand', image: 'https://media.themoviedb.org/t/p/w600_and_h900_face/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg' },
+      { name: 'Jessica Chastain', role: 'Murph', image: 'https://media.themoviedb.org/t/p/w600_and_h900_face/lodMzLKSdrPcBry6TdoDsMN3Vge.jpg' },
+      { name: 'Michael Caine', role: 'Professor Brand', image: 'https://media.themoviedb.org/t/p/w600_and_h900_face/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg' },
+      { name: 'Matt Damon', role: 'Mann', image: 'https://media.themoviedb.org/t/p/w600_and_h900_face/At3JgvaNeEN4Z4ESKlhhes85Xo3.jpg' }
     ],
     country: 'United States',
     watchedAt: '2025-06-21',
@@ -38,11 +38,11 @@ export const moviesData = [
     rating: 8.5,
     director: 'Christopher Nolan',
     cast: [
-      { name: 'Christian Bale', role: 'Bruce Wayne / Batman' },
-      { name: 'Heath Ledger', role: 'Joker' },
-      { name: 'Aaron Eckhart', role: 'Harvey Dent' },
-      { name: 'Michael Caine', role: 'Alfred Pennyworth' },
-      { name: 'Gary Oldman', role: 'James Gordon' }
+      { name: 'Christian Bale', role: 'Bruce Wayne / Batman', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg' },
+      { name: 'Heath Ledger', role: 'Joker', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/p2z2bURSg7nuMsN9P2s61e2RvNz.jpg' },
+      { name: 'Aaron Eckhart', role: 'Harvey Dent', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg' },
+      { name: 'Michael Caine', role: 'Alfred Pennyworth', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg' },
+      { name: 'Gary Oldman', role: 'James Gordon', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/2v9FVVBUrrkW2m3QOcYkuhq9A6o.jpg' }
     ],
     country: 'United States',
     watchedAt: '2025-05-30',
@@ -65,11 +65,11 @@ export const moviesData = [
     rating: 8.5,
     director: 'Bong Joon-ho',
     cast: [
-      { name: 'Song Kang-ho', role: 'Kim Ki-taek' },
-      { name: 'Cho Yeo-jeong', role: 'Park Yeon-kyo' },
-      { name: 'Choi Woo-shik', role: 'Ki-woo' },
-      { name: 'Park So-dam', role: 'Ki-jung' },
-      { name: 'Lee Sun-kyun', role: 'Dong-ik' }
+      { name: 'Song Kang-ho', role: 'Kim Ki-taek', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/7dw9wIpFZ5nJZ3zqrue8t7hUUgQ.jpg' },
+      { name: 'Cho Yeo-jeong', role: 'Park Yeon-kyo', image: '' },
+      { name: 'Choi Woo-shik', role: 'Ki-woo', image: '' },
+      { name: 'Park So-dam', role: 'Ki-jung', image: '' },
+      { name: 'Lee Sun-kyun', role: 'Dong-ik', image: '' }
     ],
     country: 'South Korea',
     watchedAt: '2025-06-25',
@@ -92,11 +92,11 @@ export const moviesData = [
     rating: 8.7,
     director: 'Francis Ford Coppola',
     cast: [
-      { name: 'Marlon Brando', role: 'Don Vito Corleone' },
-      { name: 'Al Pacino', role: 'Michael Corleone' },
-      { name: 'James Caan', role: 'Sonny Corleone' },
-      { name: 'Diane Keaton', role: 'Kay Adams' },
-      { name: 'Robert Duvall', role: 'Tom Hagen' }
+      { name: 'Marlon Brando', role: 'Don Vito Corleone', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/iyO183LVAJ0I4ZkNibINPjfAjCP.jpg' },
+      { name: 'Al Pacino', role: 'Michael Corleone', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/2dGBb1fOcNdZjtQToVPFxXjm4ke.jpg' },
+      { name: 'James Caan', role: 'Sonny Corleone', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/v3flJtQEyczxENi29yJyvnN6LVt.jpg' },
+      { name: 'Diane Keaton', role: 'Kay Adams', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/tnx7pJqisfAzvXOR5wHQsbnH9XH.jpg' },
+      { name: 'Robert Duvall', role: 'Tom Hagen', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/ybMmK25h4IVtfE7qrnlVp47RQlh.jpg' }
     ],
     country: 'United States',
     watchedAt: '2025-07-11',
@@ -118,11 +118,11 @@ export const moviesData = [
     rating: 8.5,
     director: 'Robert Zemeckis',
     cast: [
-      { name: 'Michael J. Fox', role: 'Marty McFly' },
-      { name: 'Christopher Lloyd', role: 'Doc Brown' },
-      { name: 'Lea Thompson', role: 'Lorraine Baines' },
-      { name: 'Crispin Glover', role: 'George McFly' },
-      { name: 'Thomas F. Wilson', role: 'Biff Tannen' }
+      { name: 'Michael J. Fox', role: 'Marty McFly', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/c8wWX6QsmrvwZ1flHF5iprAPdK7.jpg' },
+      { name: 'Christopher Lloyd', role: 'Doc Brown', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/nxVjpyb3UrfbPZnEyDNlQVlFAs5.jpg' },
+      { name: 'Lea Thompson', role: 'Lorraine Baines', image: '' },
+      { name: 'Crispin Glover', role: 'George McFly', image: '' },
+      { name: 'Thomas F. Wilson', role: 'Biff Tannen', image: '' }
     ],
     country: 'United States',
     watchedAt: '2025-07-31',
@@ -145,11 +145,11 @@ export const moviesData = [
     rating: 8.4,
     director: 'Christopher Nolan',
     cast: [
-      { name: 'Leonardo DiCaprio', role: 'Dom Cobb' },
-      { name: 'Joseph Gordon-Levitt', role: 'Arthur' },
-      { name: 'Elliot Page', role: 'Ariadne' },
-      { name: 'Tom Hardy', role: 'Eames' },
-      { name: 'Ken Watanabe', role: 'Saito' }
+      { name: 'Leonardo DiCaprio', role: 'Dom Cobb', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg' },
+      { name: 'Joseph Gordon-Levitt', role: 'Arthur', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/z2FA8js799xqtfiFjBTicFYdfk.jpg' },
+      { name: 'Elliot Page', role: 'Ariadne', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/eCeFgzS8dYHnMfWQT0oQitCrsSz.jpg' },
+      { name: 'Tom Hardy', role: 'Eames', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/yQZKb2ED7muJJmwghlGzgDRAVVr.jpg' },
+      { name: 'Ken Watanabe', role: 'Saito', image: 'https://media.themoviedb.org/t/p/w276_and_h350_face/w2t30L5Cmr34myAaUobLoSgsLfS.jpg' }
     ],
     country: 'United States',
     watchedAt: '2025-07-10',
@@ -172,11 +172,11 @@ export const moviesData = [
     rating: 8.0,
     director: 'Damien Chazelle',
     cast: [
-      { name: 'Ryan Gosling', role: 'Sebastian' },
-      { name: 'Emma Stone', role: 'Mia' },
-      { name: 'John Legend', role: 'Keith' },
-      { name: 'Rosemarie DeWitt', role: 'Laura' },
-      { name: 'J.K. Simmons', role: 'Bill' }
+      { name: 'Ryan Gosling', role: 'Sebastian', image: '' },
+      { name: 'Emma Stone', role: 'Mia', image: '' },
+      { name: 'John Legend', role: 'Keith', image: '' },
+      { name: 'Rosemarie DeWitt', role: 'Laura', image: '' },
+      { name: 'J.K. Simmons', role: 'Bill', image: '' }
     ],
     country: 'United States',
     watchedAt: '2025-06-30',
@@ -197,11 +197,11 @@ export const moviesData = [
     rating: 7.9,
     director: 'Colin Trevorrow',
     cast: [
-      { name: 'Chris Pratt', role: 'Owen Grady' },
-      { name: 'Bryce Dallas Howard', role: 'Claire Dearing' },
-      { name: 'Laura Dern', role: 'Dr. Ellie Sattler' },
-      { name: 'Sam Neill', role: 'Dr. Alan Grant' },
-      { name: 'Jeff Goldblum', role: 'Dr. Ian Malcolm' }
+      { name: 'Chris Pratt', role: 'Owen Grady', image: '' },
+      { name: 'Bryce Dallas Howard', role: 'Claire Dearing', image: '' },
+      { name: 'Laura Dern', role: 'Dr. Ellie Sattler', image: '' },
+      { name: 'Sam Neill', role: 'Dr. Alan Grant', image: '' },
+      { name: 'Jeff Goldblum', role: 'Dr. Ian Malcolm', image: '' }
     ],
     country: 'United States',
     watchedAt: null,
@@ -222,11 +222,11 @@ export const moviesData = [
     rating: 8.1,
     director: 'Dean DeBlois',
     cast: [
-      { name: 'Jay Baruchel', role: 'Hiccup' },
-      { name: 'America Ferrera', role: 'Astrid' },
-      { name: 'Gerard Butler', role: 'Stoick' },
-      { name: 'Craig Ferguson', role: 'Gobber' },
-      { name: 'Kristen Wiig', role: 'Ruffnut' }
+      { name: 'Jay Baruchel', role: 'Hiccup', image: '' },
+      { name: 'America Ferrera', role: 'Astrid', image: '' },
+      { name: 'Gerard Butler', role: 'Stoick', image: '' },
+      { name: 'Craig Ferguson', role: 'Gobber', image: '' },
+      { name: 'Kristen Wiig', role: 'Ruffnut', image: '' }
     ],
     country: 'United States',
     watchedAt: null,
@@ -247,9 +247,9 @@ export const moviesData = [
     rating: 8.0,
     director: 'Zack Snyder',
     cast: [
-      { name: 'Henry Cavill', role: 'Clark Kent / Superman' },
-      { name: 'Amy Adams', role: 'Lois Lane' },
-      { name: 'Michael Shannon', role: 'General Zod' }
+      { name: 'Henry Cavill', role: 'Clark Kent / Superman', image: '' },
+      { name: 'Amy Adams', role: 'Lois Lane', image: '' },
+      { name: 'Michael Shannon', role: 'General Zod', image: '' }
     ],
     country: 'United States',
         watchedAt: null,
@@ -271,9 +271,9 @@ export const moviesData = [
     rating: 7.9,
     director: 'John Smith',
     cast: [
-      { name: 'Actor 1', role: 'Survivor 1' },
-      { name: 'Actor 2', role: 'Survivor 2' },
-      { name: 'Actor 3', role: 'Survivor 3' }
+      { name: 'Actor 1', role: 'Survivor 1', image: '' },
+      { name: 'Actor 2', role: 'Survivor 2', image: '' },
+      { name: 'Actor 3', role: 'Survivor 3', image: '' }
     ],
     country: 'United States',
         watchedAt: null,
@@ -294,10 +294,10 @@ export const moviesData = [
     rating: 7.5,
     director: 'Josh Trank',
     cast: [
-      { name: 'Miles Teller', role: 'Reed Richards / Mr. Fantastic' },
-      { name: 'Kate Mara', role: 'Sue Storm / Invisible Woman' },
-      { name: 'Michael B. Jordan', role: 'Johnny Storm / Human Torch' },
-      { name: 'Jamie Bell', role: 'Ben Grimm / The Thing' }
+      { name: 'Miles Teller', role: 'Reed Richards / Mr. Fantastic', image: '' },
+      { name: 'Kate Mara', role: 'Sue Storm / Invisible Woman', image: '' },
+      { name: 'Michael B. Jordan', role: 'Johnny Storm / Human Torch', image: '' },
+      { name: 'Jamie Bell', role: 'Ben Grimm / The Thing', image: '' }
     ],
     country: 'United States',
         watchedAt: null,
@@ -319,9 +319,9 @@ export const moviesData = [
     rating: 7.2,
     director: 'Christian Tafdrup',
     cast: [
-      { name: 'Morten Burian', role: 'Abel' },
-      { name: 'Sidsel Siem Koch', role: 'Marie' },
-      { name: 'Fedja van Huêt', role: 'The Host' }
+      { name: 'Morten Burian', role: 'Abel', image: '' },
+      { name: 'Sidsel Siem Koch', role: 'Marie', image: '' },
+      { name: 'Fedja van Huêt', role: 'The Host', image: '' }
     ],
     country: 'Denmark',
     watchedAt: null,
@@ -342,10 +342,10 @@ export const moviesData = [
     rating: 8.6,
     director: '',
     cast: [
-      { name: 'John Doe', role: 'Agent Smith' },
-      { name: 'Jane Doe', role: 'Agent Johnson' },
-      { name: 'Alice Smith', role: 'Victim Survivor' },
-      { name: 'Bob Brown', role: 'Killer' }
+      { name: 'John Doe', role: 'Agent Smith', image: '' },
+      { name: 'Jane Doe', role: 'Agent Johnson', image: '' },
+      { name: 'Alice Smith', role: 'Victim Survivor', image: '' },
+      { name: 'Bob Brown', role: 'Killer', image: '' }
     ],
     country: 'United States',
     watchedAt: null,
@@ -366,11 +366,11 @@ export const moviesData = [
     rating: 7.0,
     director: 'Woody Allen',
     cast: [
-      { name: 'Woody Allen', role: 'Various' },
-      { name: 'Gene Wilder', role: 'Dr. Ross' },
-      { name: 'Louise Lasser', role: 'Herself' },
-      { name: 'John Carradine', role: 'The King' },
-      { name: 'Heather MacRae', role: 'The Queen' }
+      { name: 'Woody Allen', role: 'Various', image: '' },
+      { name: 'Gene Wilder', role: 'Dr. Ross', image: '' },
+      { name: 'Louise Lasser', role: 'Herself', image: '' },
+      { name: 'John Carradine', role: 'The King', image: '' },
+      { name: 'Heather MacRae', role: 'The Queen', image: '' }
     ],
     country: 'United States',
     watchedAt: '2025-07-09',
@@ -391,11 +391,11 @@ export const moviesData = [
     rating: 8.8,
     director: 'Peter Jackson',
     cast: [
-      { name: 'Elijah Wood', role: 'Frodo Baggins' },
-      { name: 'Ian McKellen', role: 'Gandalf' },
-      { name: 'Viggo Mortensen', role: 'Aragorn' },
-      { name: 'Sean Astin', role: 'Samwise Gamgee' },
-      { name: 'Orlando Bloom', role: 'Legolas' }
+      { name: 'Elijah Wood', role: 'Frodo Baggins', image: '' },
+      { name: 'Ian McKellen', role: 'Gandalf', image: '' },
+      { name: 'Viggo Mortensen', role: 'Aragorn', image: '' },
+      { name: 'Sean Astin', role: 'Samwise Gamgee', image: '' },
+      { name: 'Orlando Bloom', role: 'Legolas', image: '' }
     ],
     country: 'New Zealand',
     watchedAt: '2025-07-14',
