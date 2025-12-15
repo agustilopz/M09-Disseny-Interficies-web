@@ -36,6 +36,7 @@ const Header: React.FC<HeaderProps> = ({ title, searchPlaceholder, navItems, lin
                             className="bg-[#374151] rounded-[15px] py-[0.3rem] px-6 w-[50vh] text-left"
                             placeholder={searchPlaceholder}
                             aria-label={searchPlaceholder}
+                            style={{width: "370px"}}
                         />
                     </form>
 
