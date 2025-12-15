@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import Discover from './components/Discover';
 import ComingSoon from './components/ComingSoon';
 import Lists from './components/Lists';
-import MovieDetailPage from './components/MovieDetailPage';
 import MovieDetail from './components/MovieDetail';
 
 import { moviesData} from "./moviesData";

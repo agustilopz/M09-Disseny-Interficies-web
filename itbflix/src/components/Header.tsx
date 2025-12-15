@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ title, searchPlaceholder, navItems, lin
             <nav className="bg-[#2C3545] flex justify-between items-center py-[0.8rem] px-8">
                 <ul className="flex justify-between items-center gap-8 list-none">
                     <li> <FontAwesomeIcon className="h-6 w-6 flex items-center p-[0.4rem] rounded-lg" icon={faBars} /></li>
-                    <li className="text-[1.4rem] font-semibold">{title}</li>
+                    <li className="text-[1.4rem] font-semibold"><Link to="/films">{title}</Link></li>
                     <li>
                     <form role="search" aria-label="Search movies and TV">
                         <label htmlFor="search-input" className="sr-only">Search Movies & TV</label>
