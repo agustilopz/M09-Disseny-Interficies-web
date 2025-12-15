@@ -26,12 +26,18 @@ const Header: React.FC<HeaderProps> = ({ title, searchPlaceholder, navItems, lin
                     <li> <FontAwesomeIcon className="h-6 w-6 flex items-center p-[0.4rem] rounded-lg" icon={faBars} /></li>
                     <li className="text-[1.4rem] font-semibold">{title}</li>
                     <li>
-                        <form>
-                            <label htmlFor="search-input" className="sr-only">
-                                <input id="search-input" aria-label={searchPlaceholder} ref={inputRef} type="text" name="search" className="bg-[#374151] rounded-[15px] py-[0.3rem] px-6 w-[50vh] text-left" placeholder={searchPlaceholder} role="navigation"/>
-                            </label>
-                           {/*} <input type="submit" value="Submit" placeholder="Search Movies & TV" /> {/* */}
-                        </form>
+                    <form role="search" aria-label="Search movies and TV">
+                        <label htmlFor="search-input" className="sr-only">Search Movies & TV</label>
+                        <input
+                            id="search-input"
+                            ref={inputRef}
+                            type="text"
+                            name="search"
+                            className="bg-[#374151] rounded-[15px] py-[0.3rem] px-6 w-[50vh] text-left"
+                            placeholder={searchPlaceholder}
+                            aria-label={searchPlaceholder}
+                        />
+                    </form>
 
                         {/*}
                         <form action="">
@@ -40,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ title, searchPlaceholder, navItems, lin
                         {*/}
                     </li>
                 </ul>
-                <ul className="flex justify-between list-none gap-8 items-center font-medium">
+                <ul className="flex justify-between list-none gap-8 items-center font-medium"role="navigation">
                     {navItems.map((item, i) => {
                         return (
                             <li><Link to={links[i]} className={`nav-link ${isActive(links[i]) ? 'active' : ''}`}>{item}</Link></li>

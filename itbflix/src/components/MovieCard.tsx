@@ -18,6 +18,7 @@ const MovieCard: React.FC<MovieCardProps> = ({image, title, year, duration, onCl
     src={image} alt={title} 
     className="w-full h-auto rounded-lg border-2 border-transparent hover:border-gray-400 cursor-pointer"
     onClick={onClick}
+    tabIndex={0}
     />
     <h3 className="text-[1.0rem] my-1 text-[#E6EBF3] font-normal font-inter no-underline line-clamp-2 overflow-hidden text-ellipsis" 
     onClick={onClick}>{title}</h3>
