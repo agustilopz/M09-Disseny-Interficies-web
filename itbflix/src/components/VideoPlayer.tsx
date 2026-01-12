@@ -6,16 +6,16 @@ interface VideoPlayerProps {
     fallback: string;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({videoMp4, videoWebm, fallback}) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoMp4, videoWebm, fallback }) => {
 
     return (
-    <>
-    <video controls className="w-full">
-        <source src={`${videoMp4}.mp4`} type="video/mp4" />
-        <source src={`${videoWebm}.webm`} type="video/webm" />
-        {fallback}
-    </video>
-    </>
+        <>
+            <video controls className="w-full">
+                <source src={`${videoMp4}.mp4`} type="video/mp4" />
+                <source src={`${videoWebm}.webm`} type="video/webm" />
+                {fallback}
+            </video>
+        </>
     )
 }
 

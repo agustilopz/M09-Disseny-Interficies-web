@@ -1,5 +1,3 @@
-
-
 const Lists: React.FC = () => {
     return (
         <div className="p-8">

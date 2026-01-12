@@ -38,15 +38,15 @@ interface MovieDetailProps {
 }
 
 
-const MovieDetail: React.FC<MovieDetailProps> = ({movies}) => {
+const MovieDetail: React.FC<MovieDetailProps> = ({ movies }) => {
   const { id } = useParams<{ id: string }>();
   const movie = movies.find(m => m.id === (id));
 
-if (!movie) {
-  return <div className="text-white">Movie not found</div>;
-}
+  if (!movie) {
+    return <div className="text-white">Movie not found</div>;
+  }
   return (
-    <main className="main-movie-details min-h-screen bg-[#12192B] bg-cover bg-center text-white" style={{backgroundImage: `url('/assets/images/TheGodfatherBackdropGrade.png')`}}>
+    <main className="main-movie-details min-h-screen bg-[#12192B] bg-cover bg-center text-white" style={{ backgroundImage: `url('/assets/images/TheGodfatherBackdropGrade.png')` }}>
       <section className="movie-details bg-[#12192bcc] p-8 rounded-lg max-w-5xl mx-auto mt-8 shadow-lg">
 
         <article className="main-header flex flex-col md:flex-row gap-8">
@@ -71,7 +71,7 @@ if (!movie) {
               <p><b>Genres:</b> {movie.genres.join(', ')}</p>
               <p><b>Rating:</b> {movie.rating}/10</p>
               {/* Add more details as needed, e.g. bso, trailer */}
-              
+
             </div>
           </div>
         </article>
@@ -91,7 +91,7 @@ if (!movie) {
         {movie.trailer && (
           <div className="mt-8">
             <h3 className="text-xl font-bold mb-2">Trailer</h3>
-            <VideoPlayer 
+            <VideoPlayer
               videoMp4={movie.trailer}
               videoWebm={movie.trailer}
               fallback="Your browser does not support the video tag."
@@ -99,13 +99,13 @@ if (!movie) {
           </div>
         )}
 
-                      {movie.bso && (<div className="mt-4">
-                <h4 className="text-lg font-semibold mb-2">Original Soundtrack</h4>
-                <AudioPlayer 
-                audioMpeg={movie.bso}
-                fallback={movie.bso} />
-              </div>
-              )}
+        {movie.bso && (<div className="mt-4">
+          <h4 className="text-lg font-semibold mb-2">Original Soundtrack</h4>
+          <AudioPlayer
+            audioMpeg={movie.bso}
+            fallback={movie.bso} />
+        </div>
+        )}
       </section>
     </main>
   );
