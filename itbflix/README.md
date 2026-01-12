@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# Disseny d'interfícies web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Multimèdia  React
 
-Currently, two official plugins are available:
+### Lazy loading
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```html
+<img src="imatge.jpg" alt="Exemple" loading="lazy" />
+<video src="video.mp4" controls loading="lazy"></video>
+```
+### `<picture>`
+- `<picture>` permet oferir imatges en diferents formats.
+- El navegador tria el millor que suporta.
+- L’últim `<img>` és la imatge per defecte perquè sempre funcioni.
 
-## React Compiler
-
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```html
+<picture>
+  <source srcset="imatge.avif" type="image/avif">
+  <source srcset="imatge.webp" type="image/webp">
+  <img src="imatge.jpg" alt="Exemple">
+</picture>
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### `<img>`, `<audio>`, `<video>`
+```html
+<audio controls>
+  <source src="so.mp3" type="audio/mpeg">
+  <source src="so.ogg" type="audio/ogg">
+  El teu navegador no suporta àudio.
+</audio>
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```html
+<video controls width="640" height="360">
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+  <track src="subtitols.vtt" kind="subtitles" srclang="ca" label="Català">
+  El teu navegador no suporta vídeo.
+</video>
 ```
