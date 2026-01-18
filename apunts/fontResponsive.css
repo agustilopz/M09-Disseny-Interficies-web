@@ -1,0 +1,24 @@
+/* --- Estil Base (Escriptori) --- */
+h1 {
+  font-size: 60px; /* Molt gran per a pantalles amples */
+  color: navy;
+  text-align: left;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* --- Estil per a Mòbil (Pantalles < 600px) --- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px; /* Reduïm a gairebé la meitat */
+    color: darkblue; /* Opcional: fins i tot podem canviar el color */
+    text-align: center; /* Centrem el títol en mòbil */
+  }
+
+  p {
+    font-size: 16px; /* Ajustem lleugerament el text per llegir millor */
+  }
+}

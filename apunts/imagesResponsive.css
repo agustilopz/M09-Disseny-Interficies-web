@@ -1,0 +1,25 @@
+/* --- Estil Base (Escriptori) --- */
+.galeria {
+    display: flex;            /* Posem els elements un al costat de l'altre */
+    justify-content: space-between;
+    gap: 20px;                /* Espai entre fotos */
+}
+
+.foto {
+    width: 30%;               /* Cada foto ocupa un 30% de l'ample (caben 3) */
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Estil per a Tablet i Mòbil (Pantalles < 768px) --- */
+@media (max-width: 768px) {
+    .galeria {
+        flex-direction: column; /* Canviem la direcció: ara van de dalt a baix */
+    }
+
+    .foto {
+        width: 100%;           /* Ara volem que la foto ocupi tot l'ample de la pantalla */
+        margin-bottom: 20px;   /* Afegim separació vertical */
+    }
+}
