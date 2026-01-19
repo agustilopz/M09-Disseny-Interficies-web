@@ -25,13 +25,14 @@ const Header = ({title, navItems, links}) => {
                                 <FontAwesomeIcon icon={faBars} className="h-6 w-6" />
                             </button>
                         </li>
-                        <li className="text-[1.4rem] font-semibold"><Link to="/">{title}</Link></li>
+                        {/* <li className="text-[1.4rem] font-semibold"><Link to="/">{title}</Link></li> */}
 
 
 
-                        <li><Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link></li>
-                        <li><Link to="/about" className={isActive('/about') ? 'active' : ''}>About</Link></li>
-                        <li><Link to="/contact" className={isActive('/contact') ? 'active' : ''}>Contact</Link></li>
+
+                    {navItems.map((item, i) => (
+                        <li key={item}><Link to={links[i]} className={`nav-link ${isActive(links[i]) ? 'active' : ''}`}>{item}</Link></li>
+                    ))}
                     </ul>
                 </nav>
             </header>
