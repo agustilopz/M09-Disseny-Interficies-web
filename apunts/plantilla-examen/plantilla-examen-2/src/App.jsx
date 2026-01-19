@@ -15,8 +15,7 @@ function App() {
   return (
     <>
     <Header
-      title="Pàgina"
-      searchPlaceholder="Search Movies & TV"
+      title="ITBFlix"
       navItems={["Home", "About", "Contact"]}
       links={["/","/about","/contact"]}
     />
