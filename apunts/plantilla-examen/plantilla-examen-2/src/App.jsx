@@ -14,7 +14,12 @@ function App() {
 
   return (
     <>
-      <Header />
+    <Header
+      title="Pàgina"
+      searchPlaceholder="Search Movies & TV"
+      navItems={["Home", "About", "Contact"]}
+      links={["/","/about","/contact"]}
+    />
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
