@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
 import React, { useRef, useEffect, useState } from 'react';
-import '../styles/header.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
