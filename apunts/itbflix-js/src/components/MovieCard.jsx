@@ -7,7 +7,7 @@ const MovieCard = ({ image, title, year, duration, onClick }) => {
     <>
       <div className="flex flex-col items-start relative">
         <img
-          src={image} alt={title}
+          src={image} alt={`${title} poster`}
           className="w-full h-auto rounded-lg border-2 border-transparent hover:border-gray-400 cursor-pointer"
           onClick={onClick}
           tabIndex={0}

@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ title, searchPlaceholder, navItems, lin
                     </li>
                 </ul>
                 {/* Desktop nav */}
-                <ul className="hidden md:flex justify-between list-none gap-8 items-center font-medium" role="navigation">
+                <ul className="hidden md:flex justify-between list-none gap-8 items-center font-medium">
                     {navItems.map((item, i) => (
                         <li key={item}><Link to={links[i]} className={`nav-link ${isActive(links[i]) ? 'active' : ''}`}>{item}</Link></li>
                     ))}
@@ -66,7 +66,6 @@ const Header: React.FC<HeaderProps> = ({ title, searchPlaceholder, navItems, lin
                 )}
                 <ul
                     className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-[#2C3545] z-50 flex flex-col gap-8 p-8 font-medium transition-transform duration-300 md:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}
-                    role="navigation"
                     style={{ boxShadow: menuOpen ? '0 0 0 100vw rgba(0,0,0,0.5)' : undefined }}
                 >
                     <li className="flex justify-end">

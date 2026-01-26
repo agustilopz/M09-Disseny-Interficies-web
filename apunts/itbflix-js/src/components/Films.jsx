@@ -13,6 +13,7 @@ const Films = () => {
   return (
     <>
 
+      <main>
       <h4 className="block pt-8 pl-10 font-medium text-2xl text-left"><span className="hover:text-gray-400 inline-block cursor-pointer">Top Rated Movies</span></h4>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-8">
 
@@ -34,6 +35,7 @@ const Films = () => {
   </Link>
     {*/}
       </div>
+      </main>
 
     </>
   )
