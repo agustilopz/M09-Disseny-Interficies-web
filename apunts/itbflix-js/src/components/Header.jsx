@@ -49,11 +49,11 @@ const Header = ({ title, searchPlaceholder, navItems, links }) => {
                     </li>
                 </ul>
                 {/* Desktop nav */}
-                <ul className="hidden md:flex justify-between list-none gap-8 items-center font-medium" role="navigation">
+                <div className="hidden md:flex justify-between list-none gap-8 items-center font-medium" role="navigation">
                     {navItems.map((item, i) => (
-                        <li key={item}><Link to={links[i]} className={`nav-link ${isActive(links[i]) ? 'active' : ''}`}>{item}</Link></li>
+                        <div key={item}><Link to={links[i]} className={`nav-link ${isActive(links[i]) ? 'active' : ''}`}>{item}</Link></div>
                     ))}
-                </ul>
+                </div>
                 {/* Mobile menu overlay */}
                 {menuOpen && (
                     <div className="fixed inset-0 bg-black bg-opacity-60 z-40 md:hidden" onClick={() => setMenuOpen(false)}></div>
