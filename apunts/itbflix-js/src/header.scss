@@ -30,7 +30,12 @@ $dark-mode: true;
 // }
 
 .header-nav {
-  background-color: if($dark-mode, $color-primari, $color-secundari); // Condicional
+  // background-color: if($dark-mode, $color-primari, $color-secundari); // Condicional
+  @if $dark-mode {
+    color: $color-primari;
+  } @else {
+    color: $color-secundari;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
