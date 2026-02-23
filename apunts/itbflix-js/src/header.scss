@@ -42,14 +42,15 @@ $dark-mode: true;
   padding: 0.8rem 2rem;
   position: relative;
   backdrop-filter: blur(8px); // Nitidesa
-}
 
-.header-ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
+    ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+
+    }
 }
 
 .header-btn {
