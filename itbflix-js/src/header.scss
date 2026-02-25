@@ -30,7 +30,7 @@ $gaps: (
 /* ── Header ── */
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.87);
+  color: $text-color;
   text-decoration: none;
   padding: 0.5em 1em;
   border-radius: 0.375rem;
@@ -86,7 +86,7 @@ $gaps: (
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
+  color: $text-color;
 }
 
 .menu-icon {
@@ -104,7 +104,7 @@ $gaps: (
   border-radius: 15px;
   padding: $padding-petit;
   width: 100%;
-  color: white;
+  color: $text-color;
   border: none;
   outline: none;
   font-size: 1rem;
@@ -166,7 +166,7 @@ $gaps: (
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
+  color: $text-color;
   font-size: 1.5rem;
 }
 
