@@ -20,19 +20,19 @@ const Header = ({ title, searchPlaceholder, navItems, links }) => {
     }, [location.pathname]);
     return (
         <>
-            <nav className="header-nav">
-                <ul className="header-ul">
+            <nav className="bg-[#2C3545] flex justify-between items-center py-[0.8rem] px-8 relative">
+                <ul className="flex justify-between items-center gap-8 list-none">
                     <li>
                         <button
-                            className="header-btn"
+                            className="md:hidden h-10 w-10 flex items-center justify-center p-[0.4rem] rounded-lg focus:outline-none"
                             aria-label="Open menu"
                             onClick={() => setMenuOpen(!menuOpen)}
                         >
-                            <FontAwesomeIcon icon={faBars} className="icon-bars" />
+                            <FontAwesomeIcon icon={faBars} className="h-6 w-6" />
                         </button>
                     </li>
-                    <li className="header-title"><Link to="/films">{title}</Link></li>
-                    <li className="header-form">
+                    <li className="text-[1.4rem] font-semibold"><Link to="/films">{title}</Link></li>
+                    <li className="hidden md:block">
                         <form role="search" aria-label="Search movies and TV">
                             <label htmlFor="search-input" className="sr-only">Search Movies & TV</label>
                             <input
@@ -40,7 +40,7 @@ const Header = ({ title, searchPlaceholder, navItems, links }) => {
                                 ref={inputRef}
                                 type="text"
                                 name="search"
-                                className="header-search-input"
+                                className="bg-[#374151] rounded-[15px] py-[0.3rem] px-6 w-[50vh] text-left"
                                 placeholder={searchPlaceholder}
                                 aria-label={searchPlaceholder}
                                 style={{ width: "370px" }}
@@ -49,23 +49,23 @@ const Header = ({ title, searchPlaceholder, navItems, links }) => {
                     </li>
                 </ul>
                 {/* Desktop nav */}
-                <div className="header-desktop-nav" role="navigation">
+                <div className="hidden md:flex justify-between list-none gap-8 items-center font-medium" role="navigation">
                     {navItems.map((item, i) => (
                         <div key={item}><Link to={links[i]} className={`nav-link ${isActive(links[i]) ? 'active' : ''}`}>{item}</Link></div>
                     ))}
                 </div>
                 {/* Mobile menu overlay */}
                 {menuOpen && (
-                    <div className="header-mobile-overlay" onClick={() => setMenuOpen(false)}></div>
+                    <div className="fixed inset-0 bg-black bg-opacity-60 z-40 md:hidden" onClick={() => setMenuOpen(false)}></div>
                 )}
                 <ul
-                    className={`header-mobile-menu ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                    className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-[#2C3545] z-50 flex flex-col gap-8 p-8 font-medium transition-transform duration-300 md:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}
                     role="navigation"
                     style={{ boxShadow: menuOpen ? '0 0 0 100vw rgba(0,0,0,0.5)' : undefined }}
                 >
                     <li className="flex justify-end">
                         <button
-                            className="header-btn"
+                            className="h-10 w-10 flex items-center justify-center p-[0.4rem] rounded-lg focus:outline-none"
                             aria-label="Close menu"
                             onClick={() => setMenuOpen(false)}
                         >
@@ -79,7 +79,7 @@ const Header = ({ title, searchPlaceholder, navItems, links }) => {
                                 id="search-input-mobile"
                                 type="text"
                                 name="search"
-                                className="header-mobile-search-input"
+                                className="bg-[#374151] rounded-[15px] py-[0.3rem] px-6 w-full text-left"
                                 placeholder={searchPlaceholder}
                                 aria-label={searchPlaceholder}
                             />

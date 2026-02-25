@@ -5,34 +5,35 @@ import '../App.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-
 const Header = ({ title, searchPlaceholder, navItems, links }) => {
-    const location = useLocation()
-    const isActive = (path) => location.pathname === path
+    const location = useLocation();
+    const isActive = (path) => location.pathname === path;
     const inputRef = useRef(null);
     const [menuOpen, setMenuOpen] = useState(false);
+
     useEffect(() => {
         inputRef.current?.focus();
     }, []);
-    // Tanca el menú quan canvies de ruta
+
     useEffect(() => {
         setMenuOpen(false);
     }, [location.pathname]);
+
     return (
         <>
-            <nav className="bg-[#2C3545] flex justify-between items-center py-[0.8rem] px-8 relative">
-                <ul className="flex justify-between items-center gap-8 list-none">
+            <nav className="header-nav">
+                <ul className="header-left">
                     <li>
                         <button
-                            className="md:hidden h-10 w-10 flex items-center justify-center p-[0.4rem] rounded-lg focus:outline-none"
+                            className="menu-toggle"
                             aria-label="Open menu"
                             onClick={() => setMenuOpen(!menuOpen)}
                         >
-                            <FontAwesomeIcon icon={faBars} className="h-6 w-6" />
+                            <FontAwesomeIcon icon={faBars} className="menu-icon" />
                         </button>
                     </li>
-                    <li className="text-[1.4rem] font-semibold"><Link to="/films">{title}</Link></li>
-                    <li className="hidden md:block">
+                    <li className="header-title"><Link to="/films">{title}</Link></li>
+                    <li className="header-search-desktop">
                         <form role="search" aria-label="Search movies and TV">
                             <label htmlFor="search-input" className="sr-only">Search Movies & TV</label>
                             <input
@@ -40,36 +41,40 @@ const Header = ({ title, searchPlaceholder, navItems, links }) => {
                                 ref={inputRef}
                                 type="text"
                                 name="search"
-                                className="bg-[#374151] rounded-[15px] py-[0.3rem] px-6 w-[50vh] text-left"
+                                className="search-input"
                                 placeholder={searchPlaceholder}
                                 aria-label={searchPlaceholder}
-                                style={{ width: "370px" }}
                             />
                         </form>
                     </li>
                 </ul>
+
                 {/* Desktop nav */}
-                <div className="hidden md:flex justify-between list-none gap-8 items-center font-medium" role="navigation">
+                <div className="header-desktop-nav" role="navigation">
                     {navItems.map((item, i) => (
-                        <div key={item}><Link to={links[i]} className={`nav-link ${isActive(links[i]) ? 'active' : ''}`}>{item}</Link></div>
+                        <div key={item}>
+                            <Link to={links[i]} className={`nav-link ${isActive(links[i]) ? 'active' : ''}`}>{item}</Link>
+                        </div>
                     ))}
                 </div>
-                {/* Mobile menu overlay */}
+
+                {/* Mobile overlay */}
                 {menuOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-60 z-40 md:hidden" onClick={() => setMenuOpen(false)}></div>
+                    <div className="mobile-overlay" onClick={() => setMenuOpen(false)}></div>
                 )}
+
+                {/* Mobile menu */}
                 <ul
-                    className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-[#2C3545] z-50 flex flex-col gap-8 p-8 font-medium transition-transform duration-300 md:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                    className={`mobile-menu ${menuOpen ? 'mobile-menu--open' : ''}`}
                     role="navigation"
-                    style={{ boxShadow: menuOpen ? '0 0 0 100vw rgba(0,0,0,0.5)' : undefined }}
                 >
-                    <li className="flex justify-end">
+                    <li className="mobile-menu-close">
                         <button
-                            className="h-10 w-10 flex items-center justify-center p-[0.4rem] rounded-lg focus:outline-none"
+                            className="close-btn"
                             aria-label="Close menu"
                             onClick={() => setMenuOpen(false)}
                         >
-                            <span className="text-2xl">×</span>
+                            <span>×</span>
                         </button>
                     </li>
                     <li>
@@ -79,7 +84,7 @@ const Header = ({ title, searchPlaceholder, navItems, links }) => {
                                 id="search-input-mobile"
                                 type="text"
                                 name="search"
-                                className="bg-[#374151] rounded-[15px] py-[0.3rem] px-6 w-full text-left"
+                                className="search-input search-input--full"
                                 placeholder={searchPlaceholder}
                                 aria-label={searchPlaceholder}
                             />
@@ -99,7 +104,7 @@ const Header = ({ title, searchPlaceholder, navItems, links }) => {
                 </ul>
             </nav>
         </>
-    )
-}
+    );
+};
 
 export default Header;
